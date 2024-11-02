@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Protest+Strike&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Protest Strike", sans-serif;
+  
+            margin: 0;
+            padding: 0;
+            background-color: #1C1C1C;
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+            flex-direction: column;
+            margin-top: 2rem;
+        }
+        h1 {
+            font-weight: 200;
+  font-size: 70px;
+            margin-bottom: 20px;
+            color: #FF4500;
+           
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+
+            width: auto;
+            padding: 2rem;
+            margin-left: 2rem;
+            animation: pop-up 1.5s ease forwards;
+           
+        }
+    
+        @keyframes pop-up {
+            0% {
+        transform:  translateY(30px); 
+        opacity: 0; 
+    }
+    100% {
+        transform:  translateY(0); 
+        opacity: 1; 
+    }
+}
+        
+        .social-input {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            
+        }
+        .social-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-bottom: 1rem;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4285f4;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #instagramBtn img{
+            width: 30px;
+            height: 30px;
+            margin-top: 2px;
+
+        }
+        #instagramBtn{
+            background-color: black;
+         text-align: center;
+         align-items: center;
+         padding-left: 25px;
+         padding-right: 50px;
+          display: flex;
+          flex-direction: row;
+          font-family: "Exo 2", sans-serif;
+          font-weight: 700;
+          gap:9px;
+          width: 10rem;
+          height: 2.6rem;
+          font-size: 16px;
+          border-radius: 50px;
+        }
+
+        #instagramBtn:hover{
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+
+        #twitterBtn img{
+            width: 30px;
+            height: 30px;
+            margin-top: 2px;
+
+        }
+        #twitterBtn{
+            background-color: black;
+         text-align: center;
+         align-items: center;
+         padding-left: 25px;
+         padding-right: 20px;
+          display: flex;
+          flex-direction: row;
+          font-family: "Exo 2", sans-serif;
+          font-weight: 700;
+          gap:9px;
+          width: 9rem;
+          height: 2.6rem;
+          font-size: 16px;
+          border-radius: 50px;
+        }
+
+        #twitterBtn:hover{
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+
+        #facebookBtn img{
+            width: 30px;
+            height: 30px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+
+        }
+        #facebookBtn{
+            background-color: black;
+         text-align: center;
+         align-items: center;
+         padding-left: 26px;
+         padding-right: 50px;
+          display: flex;
+          flex-direction: row;
+          font-family: "Exo 2", sans-serif;
+          font-weight: 700;
+          gap:9px;
+          width: 10rem;
+          height: 2.6rem;
+          font-size: 16px;
+          border-radius: 50px;
+        }
+
+        #facebookBtn:hover{
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+
+.allbut{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+        
+        #feedDisplay {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            overflow: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            
+           
+        }
+        #feedDisplay h2 {
+            margin: 0 0 10px;
+        }
+        .posttotal {
+            background-color: #f9f9f9;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 5px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .post{
+            width:30rem;
+        }
+        #optionselect{
+            color: aqua;
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+        #postInput{
+            width:23rem;
+            border: 5px solid black;
+            border-radius: 25px;
+            margin-top: 15px;
+        }
+
+        #feedDisplay{
+            margin-left: 22rem;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .feedContainerbut{
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(219, 14, 14);
+            color: white;
+            font-family: "Protest Strike", sans-serif;
+            padding:10px;
+            cursor: pointer;
+        }
+
+        .feedContainerbut:hover{
+            background-color: rgb(165, 9, 9);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Social Media Dashboard</h1>
+        <div class="social-input">
+            <input oninput="inputadd()" type="text" id="postInput" placeholder="Enter your post here" />
+        </div>
+       <p id="optionselect" ></p>
+
+        <div class="allbut">
+            
+            <button class="button" id="instagramBtn"><p>Instagram</p><img src="https://cdn-icons-png.flaticon.com/128/15713/15713420.png"></button>
+            
+            
+            <button class="button" id="twitterBtn"><p>Twitter</p><img src="https://cdn-icons-png.flaticon.com/128/733/733579.png"></button>
+            
+            <button class="button" id="facebookBtn"><p>Facebook</p><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png"></button>
+        </div>
+        </div>
+
+        
+        
+
+       
+
+        <div id="feedDisplay">
+            <h2>Feed Display</h2>
+            <div id="feedContainer">
+                
+              
+            </div>
+           
+            
+        
+    </div>
+    <script>
+        const feedContainer = document.getElementById("feedContainer");
+        const postInput = document.getElementById("postInput");
+        const inputchange = document.getElementById("optionselect");
+        
+      
+        function addPost(platform) {
+            const post = postInput.value;
+            if (post) {
+                const newPost = document.createElement("div");
+                newPost.className = "posttotal";
+                const newpost2=document.createElement("div");
+                newpost2.className="post";
+                newpost2.textContent = `${platform}: ${post}`;
+                const butchange=document.createElement("button");
+                butchange.className="feedContainerbut";
+                butchange.innerText='Delete Post';
+                newPost.appendChild(newpost2);
+                newPost.appendChild(butchange);
+             
+                feedContainer.appendChild(newPost);
+             
+                postInput.value = ""; 
+                butchange.addEventListener("click",function()
+            {
+                newPost.remove();
+            }
+        )
+            }
+        }
+
+        document.getElementById("twitterBtn").onclick = function() {
+            addPost("Twitter");
+            inputchange.innerText="";
+        }
+
+        document.getElementById("instagramBtn").onclick = function() {
+            addPost("Instagram");
+            inputchange.innerText="";
+        }
+
+        document.getElementById("facebookBtn").onclick = function() {
+            addPost("Facebook");
+            inputchange.innerText="";
+        }
+        function inputadd()
+        {
+            
+            inputchange.innerText="Select Post Platform :";
+        }
+       
+    </script>
+</body>
+</html>
